@@ -1,14 +1,13 @@
 import React from "react";
 import "./App.css";
 import { Loader } from "@mantine/core";
+import Layout from "./Layout";
 
 function App() {
   return (
-    <div>
-      <header>
-        <Loader />
-      </header>
-    </div>
+    <Layout>
+      <Loader></Loader>asdsss
+    </Layout>
   );
 }
 
