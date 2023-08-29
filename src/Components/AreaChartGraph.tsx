@@ -9,48 +9,36 @@ import {
 } from "recharts";
 
 const data = [
-    {
-        name: "الجمعة",
-        uv: 4000,
-        pv: 2400,
-        amt: 2400,
-    },
-    {
-        name: "السبت",
-        uv: 3000,
-        pv: 1398,
-        amt: 2210,
-    },
-    {
-        name: "الأحد",
-        uv: 2000,
-        pv: 9800,
-        amt: 2290,
-    },
-    {
-        name: "الاثنين",
-        uv: 2780,
-        pv: 3908,
-        amt: 2000,
-    },
-    {
-        name: "الثلاثاء",
-        uv: 1890,
-        pv: 4800,
-        amt: 2181,
-    },
-    {
-        name: "الأربعاء",
-        uv: 2390,
-        pv: 3800,
-        amt: 2500,
-    },
-    {
-        name: "الخميس",
-        uv: 3490,
-        pv: 4300,
-        amt: 2100,
-    },
+    { name: "1", value: 4721 },
+    { name: "2", value: 8456 },
+    { name: "3", value: 6283 },
+    { name: "4", value: 5894 },
+    { name: "5", value: 7732 },
+    { name: "6", value: 2387 },
+    { name: "7", value: 1976 },
+    { name: "8", value: 5129 },
+    { name: "9", value: 6725 },
+    { name: "10", value: 3056 },
+    { name: "11", value: 8941 },
+    { name: "12", value: 7193 },
+    { name: "13", value: 1543 },
+    { name: "14", value: 4785 },
+    { name: "15", value: 6374 },
+    { name: "16", value: 8401 },
+    { name: "17", value: 5629 },
+    { name: "18", value: 9324 },
+    { name: "19", value: 1967 },
+    { name: "20", value: 7198 },
+    { name: "21", value: 6872 },
+    { name: "22", value: 3147 },
+    { name: "23", value: 8612 },
+    { name: "24", value: 7248 },
+    { name: "25", value: 3076 },
+    { name: "26", value: 5439 },
+    { name: "27", value: 6993 },
+    { name: "28", value: 1585 },
+    { name: "29", value: 5312 },
+    { name: "30", value: 4797 },
 ];
 
 const CustomTooltip = () => {
@@ -76,12 +64,7 @@ export default function AreaChartGraph() {
                 width={500}
                 height={400}
                 data={data}
-                margin={{
-                    top: 10,
-                    right: 30,
-                    left: 0,
-                    bottom: 0,
-                }}
+                margin={{ top: 0, right: 5, left: 0, bottom: 0 }}
             >
                 <defs>
                     <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
@@ -98,8 +81,8 @@ export default function AreaChartGraph() {
                     </linearGradient>
                 </defs>
                 <CartesianGrid />
-                <XAxis dataKey="name" />
-                <YAxis tickSize={15} tickLine={false} />
+                <XAxis dataKey="name" domain={[0, "dataMax"]} />
+                <YAxis tickSize={50} tickLine={false} />
                 <Tooltip
                     content={<CustomTooltip />}
                     cursor={{
@@ -110,11 +93,11 @@ export default function AreaChartGraph() {
                 />
                 <Area
                     type="monotone"
-                    dataKey="uv"
+                    dataKey="value"
                     stroke="#9FC1FB"
                     strokeWidth="3"
                     fill="url(#colorUv)"
-                    dot={true}
+                    // dot={true}
                     activeDot={{ stroke: "#0561FC", strokeWidth: 6, r: 8 }}
                 />
             </AreaChart>

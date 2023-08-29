@@ -26,10 +26,10 @@ export default function Card({ logo, title, number, badge }: CardProps) {
                 <Lottie
                     animationData={logo}
                     loop={false}
-                    style={{ width: "55px" }}
+                    style={{ width: "70px" }}
                 />
 
-                <div>
+                <Flex direction="column" justify="center">
                     <Text c="#93A3AB" weight={400}>
                         {title}
                     </Text>
@@ -39,7 +39,7 @@ export default function Card({ logo, title, number, badge }: CardProps) {
                         </Text>
                         <Badge color="green">{badge}</Badge>
                     </Flex>
-                </div>
+                </Flex>
             </Flex>
         </Grid.Col>
     );
