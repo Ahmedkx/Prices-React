@@ -90,7 +90,7 @@ export default function Layout() {
                             <Flex align={"center"}>
                                 <IconMedicineSyrup color="blue" size={40} />
                                 <Text size={20} weight={700}>
-                                    المركز البيطرى
+                                    صيدلية
                                 </Text>
                             </Flex>
                             <Searchbar />
