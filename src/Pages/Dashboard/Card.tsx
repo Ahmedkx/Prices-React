@@ -21,26 +21,26 @@ const classes = {
 
 export default function Card({ logo, title, number, badge }: CardProps) {
     return (
-        <Grid.Col span={3}>
-            <Flex sx={classes.box} justify={"space-around"} gap={10}>
-                <Lottie
-                    animationData={logo}
-                    loop={false}
-                    style={{ width: "70px" }}
-                />
+        // <Grid.Col span={3}>
+        <Flex sx={classes.box} justify={"space-around"} gap={10}>
+            <Lottie
+                animationData={logo}
+                loop={false}
+                style={{ width: "70px" }}
+            />
 
-                <Flex direction="column" justify="center">
-                    <Text c="#93A3AB" weight={400}>
-                        {title}
+            <Flex direction="column" justify="center">
+                <Text c="#93A3AB" weight={400}>
+                    {title}
+                </Text>
+                <Flex align="flex-end" gap={20}>
+                    <Text sx={{ fontSize: "24px" }} weight={700}>
+                        {number} جنيه
                     </Text>
-                    <Flex align="flex-end" gap={20}>
-                        <Text sx={{ fontSize: "24px" }} weight={700}>
-                            {number} جنيه
-                        </Text>
-                        <Badge color="green">{badge}</Badge>
-                    </Flex>
+                    <Badge color="green">{badge}</Badge>
                 </Flex>
             </Flex>
-        </Grid.Col>
+        </Flex>
+        // </Grid.Col>
     );
 }
