@@ -7,12 +7,25 @@ const classes = {
         borderRadius: "17px",
         padding: "15px 25px",
     },
+    flex: {
+        // flexDirection: {
+        //     sm: "row",
+        // },
+        // gap: {
+        //     sm: "1000px",
+        // },
+    },
 };
 
 export default function Graph() {
     return (
         <Box sx={classes.box}>
-            <Flex align="center" justify="space-between">
+            <Flex
+                align="center"
+                justify="space-between"
+                wrap="wrap"
+                sx={classes.flex}
+            >
                 <Flex align="center" gap={25}>
                     <Text weight={700} size={24}>
                         تقرير
