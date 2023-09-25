@@ -1,4 +1,9 @@
-import { IconHome2, IconSettings } from "@tabler/icons-react";
+import {
+    IconHome2,
+    IconSettings,
+    IconPackage,
+    IconUsers,
+} from "@tabler/icons-react";
 import { Navbar, Box, Center, Text, Space } from "@mantine/core";
 
 const classes = {
@@ -17,7 +22,10 @@ const classes = {
 
 export default function Sidebar({ opened }) {
     const links = [
-        { text: "الرئيسية", icon: <IconHome2 />, active: true },
+        { text: "الرئيسية", icon: <IconHome2 />, active: false },
+        { text: "المنتجات", icon: <IconPackage />, active: true },
+        { text: "تاريخ الصلاحية", icon: <IconUsers />, active: false },
+        { text: "المستخدمين", icon: <IconUsers />, active: false },
         { text: "الاعدادات", icon: <IconSettings />, active: false },
     ];
 
